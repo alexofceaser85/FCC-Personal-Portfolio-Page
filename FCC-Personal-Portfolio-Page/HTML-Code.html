@@ -4,10 +4,9 @@
     <meta charset="utf-8" />
     <title>Personal-Portfolio-Page</title>
     <link rel ="stylesheet" type ="text/css" href ="CSS-Code.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        
-    </script>
+    <link rel="icon" 
+      type="image/png" 
+      href= "Photos/favicon1.png"/>
 </head>
 <body>
      <header>
@@ -33,30 +32,66 @@
             <article class = "Grid-Container">
             <a id = "TributePageLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Tribute-Page">
                 <h2 class = "LinkHeader">FCC Tribute Site</h2>
-                
+                <img class = "LinkImage" src = "Photos/TributePage.png"/>
+                <p class = "LinkDesc">Tribute website for Free Code Camp, the subject of the site is Microsoft, the company which revolutionized the personal computing industry. Through this website I learned how to add text, images, and unordered lists</p>
             </a>
             <a id = "SurveyFormLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Survey-Form">
                 <h2 class = "LinkHeader">FCC Survey Form Site</h2> 
+                <img class = "LinkImage" src = "Photos/SurveyPage.png"/> 
+                <p class = "LinkDesc">Survey website for Free Code Camp, the site allows the user to fill in personal details about oneself. Through this website I learned how to add radio inputs, text inputs, checkbox inputs, and text validation.</p>
             </a>
             <a id = "ProductLandingLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Product-Landing-Page">
                 <h2 class = "LinkHeader">FCC Product Landing Site</h2>
+                <img class = "LinkImage" src = "Photos/ProductPage.png"/>
+                <p class = "LinkDesc">Product Landing website for Free Code Camp, the site is a fictional landing page for the iPhone X. Through this website I learned how to add a navigation bar, section elements, videos, CSS containers, and responsive web styling</p>
             </a>
             <a id = "TechnicalDocLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Techical-Documentation-Page">
                 <h2 class = "LinkHeader">FCC Technical Documentation Site</h2>
+                <img class = "LinkImage" src = "Photos/TechnicalDocPage.png"/>
+                <p class = "LinkDesc">Technical Documentation website for Free Code Camp, the site describes the basics of the HTML markup language. Through this website I learned how to add code elements and I practiced my knowledge of containers, section elements and responsive web styling.</p>
             </a>
             <a id = "JavaCalcLink" class = "GitLink" href = "https://github.com/alexofceaser85/Calculator">
                 <h2 class = "LinkHeader">Java Calculator Program</h2>
+                <img class = "LinkImage" src = "Photos/JavaCalculator.png"/>
+                <p class = "LinkDesc">Java command line calculator, the program calculates the sum, differance, product, and the quotient of two numbers. Through this program I learned how to use Scanner elements to read user input, how to translate that user input into variables, and how to manipulate those variables.</p>
             </a>
         </article> 
     </section>
     <section id = "Contact">
-        <article id = "SocialMediaLink" class = "ContactLink">
-
-        </article>
-        <article id = "PersonalInfoLink" class = "ContactLink">
-
-        </article>
-        <article id = "OtherInfoLink" class = "ContactLink">
+        <article class = "ContactContainer">
+            <div class = "ContactInfo">
+                <button id = "Email" value = "alexofcesare@gmail.com" onclick = "CopyFunction">
+                    <h1>alexofcesare@gmail.com</h1>
+                </button>
+                <button id = "Facebook">
+                    <h1>Facebook</h1>
+                </button>
+                <button id = "Instagram">
+                    <h1>Instagram</h1>
+                </button>
+            </div>
+            <div class = "ContactInfo">
+                <button id = "GitHub">
+                    <h1>GitHub</h1>
+                </button>
+                <button id = "Stack-Over-Flow">
+                    <h1>Stack Over Flow</h1>
+                </button>
+                <button id = "CodePen">
+                    <h1>CodePen</h1>
+                </button>
+            </div>
+            <div class = "ContactInfo">
+                <button id = "Indeed">
+                    <h1>Indeed</h1>
+                </button>
+                <button id = "Monster">
+                    <h1>Monster</h1>
+                </button>
+                <button id = "LinkedIn">
+                    <h1>LinkedIn</h1>
+                </button>
+            </div>
             
         </article>
     </section>

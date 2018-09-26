@@ -1,4 +1,4 @@
-﻿html{
+﻿html {
     margin-top: 0;
 }
 /*All <nav> Elements Go Below*/
@@ -10,18 +10,21 @@
     background-color: red;
     z-index: 1;
 }
+
 .navflexcontainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-.navlink{
+
+.navlink {
     display: inline-block;
     background-color: cadetblue;
     width: 200px;
     height: 100%;
 }
-.navtext{
+
+.navtext {
     font-size: 2em;
     text-align: center;
 }
@@ -30,46 +33,61 @@
     height: 100vh;
     background-color: rebeccapurple;
 }
+
 .WelcomeFlexContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 0vh;
 }
+
 #WelcomeHeader {
     display: inline-block;
     background-color: white;
-    margin-top: 120px;
     padding: 10px;
+    font-size: 100px;
+    margin-top: 15vh;
 }
+
 .WelcomeParagraphContainer {
     background-color: white;
     max-width: 1200px;
     min-width: 500px;
-    margin: 3vh 10px 0vh 10px;
-    min-height: 30vh;
-    max-height: 60vh;
+    margin: 0vh 10px 1vh 10px;
+    min-height: 20vh;
+    max-height: 50vh;
     overflow: auto;
 }
+
 #WelcomeParagraph {
     font-size: 3em;
     padding: 15px;
 }
 /*All Project <section> Content Goes Below*/
-#Projects{
+#Projects {
     background-color: darkseagreen;
 }
-#ProjectsHeader{
+
+#ProjectsHeader {
     margin-top: 0px;
 }
-.Grid-Container{
+
+.Grid-Container {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
 }
-.LinkHeader{
+
+.LinkHeader {
     text-align: center;
 }
+
+.LinkImage {
+    width: 100%;
+    height: auto;
+}
+
 .GitLink {
     display: block;
     background-color: white;
@@ -78,12 +96,31 @@
     text-decoration: none;
     color: black;
 }
+
+.LinkDesc {
+    margin: 5%;
+}
+/*All <section> Contact Goes Below*/
+
+.ContactContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.ContactInfo{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+}
+
 /*All <body> Elements Go Below*/
 .SectionHeader {
     top: 0;
     font-size: 5em;
     text-align: center;
 }
+
 body {
     top: 0;
     margin: 0px;
@@ -98,5 +135,3 @@ header {
     top: 0;
     margin: 0px;
 }
-
-
