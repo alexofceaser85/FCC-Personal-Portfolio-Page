@@ -62,6 +62,7 @@
 
 #WelcomeParagraph {
     font-size: 3em;
+    font-weight: 100;
     padding: 15px;
 }
 /*All Project <section> Content Goes Below*/
@@ -73,17 +74,19 @@
     margin-top: 0px;
 }
 
+.ProjectLinkHeader {
+    text-align: center;
+    font-size: 1.9vw;
+    font-weight: 900;
+}
+
 .Grid-Container {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
 }
 
-.LinkHeader {
-    text-align: center;
-}
-
-.LinkImage {
+.ProjectLinkImage {
     width: 100%;
     height: auto;
 }
@@ -97,25 +100,44 @@
     color: black;
 }
 
-.LinkDesc {
+.ProjectLinkDesc {
     margin: 5%;
+    font-size: 2.3vw;
+    font-weight: 100;
+    line-height: 40px;
 }
 /*All <section> Contact Goes Below*/
+#Contact {
+    background-color: green;
+}
 
-.ContactContainer{
+.ContactContainer {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-.ContactInfo{
+
+.ContactInfo {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: white;
     width: 100%;
+    margin: 1%;
 }
 
+.ContactSubHeader {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+.LinkText {
+    font-size: 2vw;
+    font-weight: 100;
+}
 /*All <body> Elements Go Below*/
 .SectionHeader {
+    margin-top: 0;
     top: 0;
     font-size: 5em;
     text-align: center;
@@ -134,4 +156,9 @@ li {
 header {
     top: 0;
     margin: 0px;
+}
+
+button {
+    background-color: none;
+    border: none;
 }
