@@ -162,3 +162,6 @@ button {
     background-color: none;
     border: none;
 }
+#EmailInput{
+    display: none;
+}
