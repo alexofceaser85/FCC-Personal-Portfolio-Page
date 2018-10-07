@@ -2,36 +2,48 @@
     margin-top: 0;
 }
 /*All <nav> Elements Go Below*/
-#navbar {
+#ShowNavButton {
+    display: none;
+}
+
+#NavBar {
     top: 0;
     margin: 0;
     width: 100%;
+    height: 8vh;
     position: fixed;
     background-color: red;
     z-index: 1;
 }
 
-.navflexcontainer {
+#NavCont {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.navlink {
+.NavLink {
     display: inline-block;
     background-color: cadetblue;
-    width: 200px;
-    height: 100%;
+    width: 15vw;
+
 }
 
-.navtext {
-    font-size: 2em;
+.NavText {
+    line-height: 8vh;
+    height: 100%;
+    font-size: 50px;
     text-align: center;
+    margin: 0;
 }
+
+
 /*All Welcome <section> Elements Goes Below*/
 #Welcome {
     height: 100vh;
     background-color: rebeccapurple;
+    overflow: auto;
+    padding-bottom: 20px;
 }
 
 .WelcomeFlexContainer {
@@ -39,31 +51,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 0vh;
+    padding-top: 0;
 }
 
 #WelcomeHeader {
     display: inline-block;
     background-color: white;
     padding: 10px;
-    font-size: 100px;
-    margin-top: 15vh;
+    font-size: 7vw;
+    margin-top: 150px;
+    width: 65%;
+    height: auto;
 }
+
 
 .WelcomeParagraphContainer {
     background-color: white;
-    max-width: 1200px;
-    min-width: 500px;
-    margin: 0vh 10px 1vh 10px;
-    min-height: 20vh;
-    max-height: 50vh;
-    overflow: auto;
+    width: 75%;
 }
 
 #WelcomeParagraph {
-    font-size: 3em;
+    font-size: 50px;
     font-weight: 100;
-    padding: 15px;
+    padding: 20px;
 }
 /*All Project <section> Content Goes Below*/
 #Projects {
@@ -71,12 +81,12 @@
 }
 
 #ProjectsHeader {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .ProjectLinkHeader {
     text-align: center;
-    font-size: 1.9vw;
+    font-size: 16px;
     font-weight: 900;
 }
 
@@ -94,21 +104,29 @@
 .GitLink {
     display: block;
     background-color: white;
-    margin: 0vw 1vw 2vw 1vw;
     width: 30vw;
     text-decoration: none;
     color: black;
+    margin: 0 1vw 2vw 1vw;
 }
 
 .ProjectLinkDesc {
     margin: 5%;
-    font-size: 2.3vw;
+    font-size: 25px;
     font-weight: 100;
-    line-height: 40px;
 }
 /*All <section> Contact Goes Below*/
 #Contact {
     background-color: green;
+    overflow: hidden;
+}
+
+#Email {
+    cursor: pointer;
+}
+
+.SocialMediaLink {
+    height: 8vw;
 }
 
 .ContactContainer {
@@ -129,11 +147,20 @@
     text-align: center;
     font-size: 2vw;
     font-weight: 900;
+    margin-bottom: 30px;
 }
 
 .LinkText {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    line-height: 500%;
     font-weight: 100;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
 }
 /*All <body> Elements Go Below*/
 .SectionHeader {
@@ -145,12 +172,17 @@
 
 body {
     top: 0;
-    margin: 0px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
     list-style-type: none;
     margin: 0px;
+}
+
+#EmailInput {
+    opacity: 0;
 }
 
 header {
@@ -159,9 +191,134 @@ header {
 }
 
 button {
-    background-color: none;
+    background-color: white;
     border: none;
 }
-#EmailInput{
-    display: none;
+
+a {
+    text-decoration: none;
 }
+/*All pseudo classes go below*/
+/*All pseudo elements go below*/
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+/*All @media Queries Go Below*/
+
+/*<Nav> @media Queries Go Below*/
+@media(max-width: 1500px) and (min-width: 700px) {
+    .NavFlexContainer {
+        justify-content: center;
+    }
+
+    .NavLink {
+        width: 33.33%;
+    }
+}
+
+@media(max-width: 700px) {
+
+    #ShowNavButton {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .NavLink {
+        display: none;
+    }
+
+
+    .NavFlexContainer {
+        flex-direction: column;
+        height: auto;
+    }
+}
+/*Welcome <section> @media Queries Go Below*/
+@media(max-width: 700px) {
+    .WelcomeParagraphContainer {
+        width: 95vw;
+    }
+
+    #WelcomeParagraph {
+        font-size: 30px;
+    }
+}
+/*Project <section> @media Queries Go Below*/
+@media(max-width: 1200px) {
+    .Grid-Container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-bottom: 30px;
+    }
+
+    .GitLink {
+        width: 45vw;
+    }
+}
+
+@media(max-width: 700px) {
+
+    .Grid-Container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .GitLink {
+        width: 90vw;
+        margin: 4px;
+    }
+}
+/*Contact Media Queries Go Below*/
+@media(max-width: 1100px) {
+    .ContactContainer {
+        display: grid;
+        justify-content: center;
+    }
+
+    .SocialMediaLink {
+        height: 13vw;
+    }
+
+    .ContactInfo {
+        width: 80vw;
+    }
+
+    .LinkText {
+        line-height: 13vw;
+        font-size: 6vw;
+    }
+
+    .ContactSubHeader {
+        font-size: 6vw;
+    }
+}
+/*Body Media Queries Go Below*/
+@media(max-width: 500px) {
+
+    .SectionHeader {
+        font-size: 15vw;
+    }
+}
+/*Javascript Function DisplayNavBar() CSS Goes Below*/
+@media (max-width: 700px) {
+
+    .navFlexContainerFunction {
+        flex-direction: column !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+
+    .navLinkFunction {
+        display: block !important;
+        width: 100%;
+    }
+
+    .shiftContentFunction {
+        margin-top: 200px;
+    }
+}
+
+/*Javascript ShiftContent CSS Goes Below*/

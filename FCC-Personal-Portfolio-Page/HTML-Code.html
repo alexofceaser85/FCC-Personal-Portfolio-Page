@@ -1,22 +1,21 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Personal-Portfolio-Page</title>
     <link rel ="stylesheet" type ="text/css" href ="CSS-Code.css" />
     <script type ="text/javascript" src ="JavaScript.js"></script>
-    <link rel="icon" 
-
-      type="image/png" 
-      href= "Photos/favicon1.png"/>
+    <link rel="icon" type="image/png" href= "Photos/favicon1.png"/>
 </head>
 <body>
+<input id = "EmailInput" value = "alexofcesare@gmail.com"/>
      <header>
-         <nav id ="navbar">
-             <div class = "navflexcontainer">
-               <a class = "navlink" href = "#Welcome"><h1 class = "navtext">Welcome</h1></a>
-               <a class = "navlink" href = "#Projects"><h1 class = "navtext">Projects</h1></a>
-               <a class = "navlink" href = "#Contact"><h1 class = "navtext">Contact</h1></a>
+         <nav id ="NavBar">
+             <div class = "NavFlexContainer" id = "NavCont">
+               <button onclick = "DisplayNavBar(); ShiftContent()" id = "ShowNavButton"><h1 class = "NavText">Contents</h1></button>
+               <a class = "NavLink" id = "WelcomeBtn" href = "#Welcome"><h1 class = "NavText">Welcome</h1></a>
+               <a class = "NavLink" id = "ProjectsBtn" href = "#Projects"><h1 class = "NavText">Projects</h1></a>
+               <a class = "NavLink" id = "ContactBtn" href = "#Contact"><h1 class = "NavText">Contact</h1></a>
              </div>
          </nav> 
      </header>
@@ -25,7 +24,7 @@
         <div class = "WelcomeFlexContainer">
               <h1 id = "WelcomeHeader" class = "SectionHeader">Alex Decesare</h1>
             <article class = "WelcomeParagraphContainer">
-              <p id = "WelcomeParagraph">Hi, I am Alex Decesare, Lube Technician, High-School student, and aspiring web devoloper. I am from Atlanta, Georgia, and have spent my life fascinated with computers and software applications and I am excited to learn new technologies and start my new career as a software devoloper.</p>
+              <p id = "WelcomeParagraph">Hi, I am Alex Decesare, Lube Technician, a High-School student, and an aspiring web developer. I am from Atlanta, Georgia, and have spent my life fascinated with computers and software applications and I am excited to learn new technologies and start my new career as a software developer.</p>
             </article>
             </div>
     </section>
@@ -40,7 +39,7 @@
             <a id = "SurveyFormLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Survey-Form">
                 <h2 class = "ProjectLinkHeader">FCC Survey Form Site</h2> 
                 <img class = "ProjectLinkImage" src = "Photos/SurveyPage.png"/> 
-                <p class = "ProjectLinkDesc">Survey website for Free Code Camp, the site allows the user to fill in personal details about oneself. Through this website I learned how to add radio inputs, text inputs, checkbox inputs, and text validation.</p>
+                <p class = "ProjectLinkDesc">Survey website for Free Code Camp, the site allows the user to fill in personal details about oneself. Through this website, I learned how to add radio inputs, text inputs, checkbox inputs, and text validation.</p>
             </a>
             <a id = "ProductLandingLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Product-Landing-Page">
                 <h2 class = "ProjectLinkHeader">FCC Product Landing Site</h2>
@@ -50,12 +49,12 @@
             <a id = "TechnicalDocLink" class = "GitLink" href = "https://github.com/alexofceaser85/FCC-Techical-Documentation-Page">
                 <h2 class = "ProjectLinkHeader">FCC Technical Documentation Site</h2>
                 <img class = "ProjectLinkImage" src = "Photos/TechnicalDocPage.png"/>
-                <p class = "ProjectLinkDesc">Technical Documentation website for Free Code Camp, the site describes the basics of the HTML markup language. Through this website I learned how to add code elements and I practiced my knowledge of containers, section elements and responsive web styling.</p>
+                <p class = "ProjectLinkDesc">Technical Documentation website for Free Code Camp, the site describes the basics of the HTML markup language. Through this website, I learned how to add code elements and I practiced my knowledge of containers, section elements, and responsive web styling.</p>
             </a>
             <a id = "JavaCalcLink" class = "GitLink" href = "https://github.com/alexofceaser85/Calculator">
                 <h2 class = "ProjectLinkHeader">Java Calculator Program</h2>
                 <img class = "ProjectLinkImage" src = "Photos/JavaCalculator.png"/>
-                <p class = "ProjectLinkDesc">Java command line calculator, the program calculates the sum, differance, product, and the quotient of two numbers. Through this program I learned how to use Scanner elements to read user input, how to translate that user input into variables, and how to manipulate those variables.</p>
+                <p class = "ProjectLinkDesc">Java command line calculator, the program calculates the sum, difference, product, and the quotient of two numbers. Through this program, I learned how to use Scanner elements to read user input, how to translate that user input into variables, and how to manipulate those variables.</p>
             </a>
         </article> 
     </section>
@@ -66,45 +65,42 @@
         <article class = "ContactContainer">
             <div class = "ContactInfo">
                 <h1 class = "ContactSubHeader">Personal</h1>
-                <button id = "Email" onclick = "CopyFunction();">
-                    <h1 class = "LinkText">Email</h1>
-                    
+                <button class = "SocialMediaLink" id = "Email" onclick = "CopyFunction();">
+                        <h1 class = "LinkText">Email</h1>
                 </button>
-                <button id = "Facebook">
-                    <h1 class = "LinkText">Facebook</h1>
-                </button>
-                <button id = "Instagram">
-                    <h1 class = "LinkText">Instagram</h1>
-                </button>
+                    <a id = "Facebook" class = "SocialMediaLink" href = "https://www.facebook.com/alex.rothers.7">
+                        <h1 class = "LinkText">Facebook</h1>
+                    </a>
+                    <a id = "Instagram" class = "SocialMediaLink" href = "https://www.instagram.com/alexofceaser/">
+                        <h1 class = "LinkText">Instagram</h1>
+                    </a>
             </div>
             <div class = "ContactInfo">
                 <h1 class = "ContactSubHeader">Coding</h1>
-                <button id = "GitHub">
-                    <h1 class = "LinkText">GitHub</h1>
-                </button>
-                <button id = "Stack-Over-Flow">
-                    <h1 class = "LinkText">Stack Over Flow</h1>
-                </button>
-                <button id = "CodePen">
-                    <h1 class = "LinkText">CodePen</h1>
-                </button>
+                    <a class = "SocialMediaLink" href = "https://github.com/alexofceaser85">
+                        <h1 class = "LinkText">GitHub</h1>
+                    </a>
+                    <a class = "SocialMediaLink" href = "https://stackoverflow.com/users/10416167/alexofceaser">
+                        <h1 class = "LinkText">Stack Over Flow</h1>
+                    </a>
+                    <a class = "SocialMediaLink" href = "https://codepen.io/Al_Descary/">
+                        <h1 class = "LinkText">CodePen</h1>
+                    </a>
             </div>
             <div class = "ContactInfo">
                 <h1 class = "ContactSubHeader">Employment</h1>
-                <button id = "Indeed">
+                <a id = "Indeed" class = "SocialMediaLink" href = "https://resumes.indeed.com/resume/6dca04fb070c20d4">
                     <h1 class = "LinkText">Indeed</h1>
-                </button>
-                <button id = "Monster">
-                    <h1 class = "LinkText">Monster</h1>
-                </button>
-                <button id = "LinkedIn">
+                </a>
+                <a id = "LinkedIn" class = "SocialMediaLink" href = "https://www.linkedin.com/in/alex-decesare-ba3198172/">
                     <h1 class = "LinkText">LinkedIn</h1>
-                </button>
+                </a>
+                <a id = "Resume" class = "SocialMediaLink" href = "Photos/AlexDecesareResume.pdf">
+                    <h1 class = "LinkText">Resume</h1>
+                </a>
             </div>
-            
         </article>
     </section>
-    <input id = "EmailInput" value = "alexofcesare@gmail.com"/>
 </main>
 </body>
 </html>
