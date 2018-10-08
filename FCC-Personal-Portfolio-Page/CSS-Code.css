@@ -10,7 +10,6 @@
     top: 0;
     margin: 0;
     width: 100%;
-    height: 8vh;
     position: fixed;
     background-color: red;
     z-index: 1;
@@ -25,14 +24,12 @@
 .NavLink {
     display: inline-block;
     background-color: cadetblue;
-    width: 15vw;
-
+    width: 17vw;
 }
 
 .NavText {
     line-height: 8vh;
-    height: 100%;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
     margin: 0;
 }
@@ -207,7 +204,7 @@ a {
 /*All @media Queries Go Below*/
 
 /*<Nav> @media Queries Go Below*/
-@media(max-width: 1500px) and (min-width: 700px) {
+@media(max-width: 1800px) and (min-width: 700px) {
     .NavFlexContainer {
         justify-content: center;
     }
@@ -217,12 +214,12 @@ a {
     }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1000px) {
 
     #ShowNavButton {
         display: block;
         width: 100%;
-        height: 100%;
+        height: 60px;
     }
 
     .NavLink {
@@ -301,8 +298,8 @@ a {
         font-size: 15vw;
     }
 }
-/*Javascript Function DisplayNavBar() CSS Goes Below*/
-@media (max-width: 700px) {
+/*Javascript Function CSS Goes Below*/
+@media (max-width: 1000px) {
 
     .navFlexContainerFunction {
         flex-direction: column !important;
@@ -314,11 +311,9 @@ a {
     .navLinkFunction {
         display: block !important;
         width: 100%;
+        height: 70px;
     }
 
     .shiftContentFunction {
-        margin-top: 200px;
     }
 }
-
-/*Javascript ShiftContent CSS Goes Below*/

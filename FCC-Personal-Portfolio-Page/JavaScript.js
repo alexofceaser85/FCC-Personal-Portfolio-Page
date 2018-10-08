@@ -16,5 +16,5 @@ function DisplayNavBar() {
     document.getElementById("NavBar").classList.toggle("navBarFunction");
 }
 function ShiftContent() {
-    document.getElementById("Welcome").classList.toggle("shiftContentFunction");
+    document.getElementById("WelcomeHeader").classList.toggle("shiftContentFunction");
 }
