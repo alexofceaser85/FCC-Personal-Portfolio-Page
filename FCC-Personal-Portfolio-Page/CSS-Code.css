@@ -99,11 +99,13 @@
 
 .Card-Front {
     background-color: white;
+    position: relative;
 }
 
 .Card-Container:hover .Card-Content{
     transform: rotateY(.5turn);
 }
+
 
 .Card-Back {
     transform: rotateY(.5turn);
