@@ -1,5 +1,4 @@
-﻿//Copies #EmailInput Value to Clipboard
-function CopyFunction() {
+﻿function CopyFunction() {
     //Get the EmailInput
     var CopyEmail = document.getElementById("EmailInput");
     //Selects the Value of the Input of the EmailInput Element
@@ -36,8 +35,8 @@ function HideNavBar() {
 window.onscroll = function () {
     //Get The Amount of Pixels the User Scrolled by Measuring the Viewport Position from the Top of the Webpage
     var pixelsScrolled = window.pageYOffset;
-    //Get the Element with the Id NavBar from the HTML
-    var getNavBar = document.getElementById("NavBar");
+    //Get the Element with the Id navbar from the HTML
+    var getNavBar = document.getElementById("navbar");
     //Get the Elements with the Class Name Section from the HTML
     var getSection = document.getElementsByClassName("Section");
     //Get the Elements with the Class Name NavLink from the HTML
@@ -135,4 +134,3 @@ window.onscroll = function () {
         getNavLink[3].style.backgroundColor = window.getComputedStyle(getNavBar).getPropertyValue("background-color");
     }
 }
-

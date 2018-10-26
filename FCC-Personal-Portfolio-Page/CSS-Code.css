@@ -8,12 +8,12 @@
     display: none;
 }
 
-#NavBar {
+#navbar {
     top: 0;
     margin: 0;
     width: 100%;
     position: fixed;
-    background-color: #112;
+    background-color: #000227;
     z-index: 1;
 }
 
@@ -25,10 +25,10 @@
 
 .NavLink {
     display: inline-block;
-    background-color: #112;
+    background-color: #000227;
     width: 17vw;
     height: 70px;
-    border: #112 1px solid;
+    border: #000227 1px solid;
 }
 
 .NavText {
@@ -40,7 +40,7 @@
 }
 
 /*All Welcome <section> Elements Goes Below*/
-#Welcome {
+#welcome-section {
     height: 100vh;
     background-color: #75adff;
     overflow: auto;
@@ -77,7 +77,7 @@
     padding: 20px;
 }
 /*All Project <section> Content Goes Below*/
-#Projects {
+#projects {
     background-color: #50bf8c;
 }
 
@@ -85,8 +85,12 @@
     margin-top: 0;
 }
 
+.project-tile {
+    display: flex;
+}
+
 .Card-Content {
-    display: block;
+    display: flex;
     width: 30vw;
     text-decoration: none;
     color: black;
@@ -102,13 +106,34 @@
     position: relative;
 }
 
-.Card-Container:hover .Card-Content{
-    transform: rotateY(.5turn);
+.Code-Link-Container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
+.Code-Link {
+    position: relative;
+    display: block;
+    height: 50px;
+    border: solid black 1px;
+    margin: 10px 10% 0 10%;
+}
+
+.Card-Text {
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    line-height: 50px;
+}
 
 .Card-Back {
-    transform: rotateY(.5turn);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg) translateZ(1px);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -117,7 +142,7 @@
     background-color: white;
 }
 
-.ProjectLinkHeader {
+.project-title {
     text-align: center;
     font-size: 16px;
     font-weight: 900;
@@ -130,19 +155,38 @@
 }
 
 .ProjectLinkImage {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+.project-title {
+    font-size: 20px;
 }
 
 .ProjectLinkDesc {
     margin: 5%;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 100;
+    line-height: 40px;
 }
+
+.project-tile:hover .Card-Content {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.Code-Link:hover {
+    background-color: #000339;
+}
+
+    .Code-Link:hover .Card-Text {
+        color: white;
+    }
+
 /*All <section> Contact Goes Below*/
 #Contact {
     min-height: 100vh;
-    background-color: #ffce70;
+    background-color: #F7DC82;
 }
 
 #Email {
@@ -226,19 +270,22 @@ a {
 }
 /*All pseudo classes go below*/
 .NavText:hover {
-    color: #112;
+    color: #000339;
 }
 
 .SocialMediaLink:hover {
-    color: black;
-    background-color: #75adff;
+    background-color: #000339;
 }
+
+    .SocialMediaLink:hover .LinkText {
+        color: white;
+    }
 /*Below is the Default Value of the Mouseover Background for the NavLink Class*/
 .NavLinkDefault:hover {
     background-color: #75adff;
 }
 /*All pseudo elements go below*/
-#Welcome::-webkit-scrollbar {
+#welcome-section::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
@@ -326,7 +373,7 @@ a {
         padding-bottom: 30px;
     }
 
-    .Card-Container {
+    .Card-Content {
         width: 45vw;
     }
 }
@@ -338,9 +385,8 @@ a {
         grid-template-columns: auto;
     }
 
-    .Card-Container {
-        width: 90vw;
-        margin: 4px;
+    .Card-Content {
+        width: 85vw;
     }
 }
 /*Contact Media Queries Go Below*/
