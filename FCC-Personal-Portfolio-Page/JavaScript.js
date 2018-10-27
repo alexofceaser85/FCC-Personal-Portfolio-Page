@@ -53,7 +53,6 @@ window.onscroll = function () {
     var getNavMouseOut = [getNavLink[0].addEventListener("mouseout", DefaultBackground), getNavLink[1].addEventListener("mouseout", DefaultBackground), getNavLink[2].addEventListener("mouseout", DefaultBackground), getNavLink[3].addEventListener("mouseout", DefaultBackground)];
 
 
-
     //When Mouse is Hovering Over the .NavLink Contents Button then the Background Color Changes Relative to the Background Color of the Section
     function ContentsBackground() {
         //If the Distance the User Scrolled is Less Than or Equal To the Height of the Welcome Section

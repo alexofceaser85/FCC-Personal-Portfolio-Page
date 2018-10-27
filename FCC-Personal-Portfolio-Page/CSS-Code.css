@@ -1,13 +1,46 @@
-﻿html {
+﻿/*All <html> Elements Go Below*/
+html {
     margin-top: 0;
     scroll-behavior: smooth;
 }
 
-/*All <nav> Elements Go Below*/
-#ShowNavButton {
-    display: none;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.SectionHeader {
+    padding-top: 70px;
+    top: 0;
+    font-size: 5em;
+    text-align: center;
+}
+
+#EmailInput {
+    opacity: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+}
+
+header {
+    top: 0;
+    margin: 0;
+    width: 100vw;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*All <nav> Elements Go Below*/
 #navbar {
     top: 0;
     margin: 0;
@@ -15,12 +48,7 @@
     position: fixed;
     background-color: #000227;
     z-index: 1;
-}
-
-#NavCont {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    width: 100vw;
 }
 
 .NavLink {
@@ -39,12 +67,34 @@
     margin: 0;
 }
 
+#ShowNavButton {
+    display: none;
+}
+
+#NavCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100vw;
+}
+
+/*Below is the Default Value of the Mouseover Background for the NavLink Class*/
+.NavLinkDefault:hover {
+    background-color: #75adff;
+}
+
+.NavText:hover {
+    color: #000339;
+}
+
+
 /*All Welcome <section> Elements Goes Below*/
 #welcome-section {
     height: 100vh;
     background-color: #75adff;
     overflow: auto;
-    margin-top: 50px;
+    margin-top: 0px;
+    /* width: 100vw; */
 }
 
 .WelcomeFlexContainer {
@@ -85,6 +135,12 @@
     margin-top: 0;
 }
 
+.Grid-Container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
 .project-tile {
     display: flex;
 }
@@ -104,6 +160,39 @@
 .Card-Front {
     background-color: white;
     position: relative;
+}
+
+.Card-Back {
+    transform: rotateY(180deg) translateZ(1px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.LinkDescContainer {
+    height: 65%;
+    overflow: a16px
+}
+
+.ProjectLinkDesc {
+    margin: 5%;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 40px;
+}
+
+.ProjectLinkImage {
+    max-width: 100%;
+    height: auto;
 }
 
 .Code-Link-Container {
@@ -131,48 +220,8 @@
     line-height: 50px;
 }
 
-.Card-Back {
-    -moz-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg) translateZ(1px);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-}
-
-.project-title {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 900;
-}
-
-.Grid-Container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-}
-
-.ProjectLinkImage {
-    max-width: 100%;
-    height: auto;
-}
-
-.project-title {
-    font-size: 20px;
-}
-
-.ProjectLinkDesc {
-    margin: 5%;
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 40px;
-}
-
 .project-tile:hover .Card-Content {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .Code-Link:hover {
@@ -184,21 +233,13 @@
     }
 
 /*All <section> Contact Goes Below*/
-#Contact {
+#contact {
     min-height: 100vh;
     background-color: #F7DC82;
 }
 
-#Email {
-    cursor: pointer;
-}
-
 #ContactHeader {
-    margin-top: 0px;
-}
-
-.SocialMediaLink {
-    height: 10vw;
+    margin-top: 0;
 }
 
 .ContactContainer {
@@ -221,6 +262,14 @@
     font-weight: 900;
 }
 
+.SocialMediaLink {
+    height: 10vw;
+}
+
+#Email {
+    cursor: pointer;
+}
+
 .LinkText {
     font-size: 2vw;
     line-height: 10vw;
@@ -233,45 +282,6 @@
     height: 100%;
     width: 100%;
 }
-/*All <html> Elements Go Below*/
-.SectionHeader {
-    padding-top: 70px;
-    top: 0;
-    font-size: 5em;
-    text-align: center;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-li {
-    list-style-type: none;
-    margin: 0px;
-}
-
-#EmailInput {
-    opacity: 0;
-}
-
-header {
-    top: 0;
-    margin: 0px;
-}
-
-button {
-    background-color: white;
-    border: none;
-}
-
-a {
-    text-decoration: none;
-}
-/*All pseudo classes go below*/
-.NavText:hover {
-    color: #000339;
-}
 
 .SocialMediaLink:hover {
     background-color: #000339;
@@ -280,15 +290,18 @@ a {
     .SocialMediaLink:hover .LinkText {
         color: white;
     }
-/*Below is the Default Value of the Mouseover Background for the NavLink Class*/
-.NavLinkDefault:hover {
-    background-color: #75adff;
-}
+
 /*All pseudo elements go below*/
 #welcome-section::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
     background: transparent;
 }
+
+.LinkDescContainer::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
 /*All @media Queries Go Below*/
 
 /*<Nav> @media Queries Go Below*/
@@ -304,16 +317,9 @@ a {
 
 @media(max-width: 750px) {
 
-    #ShowNavButton {
-        display: block;
-        width: 100%;
-        height: 70px;
-        font-size: 1em;
-    }
-
-    .NavText {
-        font-size: 3em;
-        line-height: 70px;
+    .NavFlexContainer {
+        flex-direction: column;
+        height: auto;
     }
 
     .NavLink {
@@ -321,23 +327,30 @@ a {
         height: 70px;
     }
 
-    .NavFlexContainer {
-        flex-direction: column;
-        height: auto;
+    .NavText {
+        font-size: 3em;
+        line-height: 70px;
+    }
+
+    #ShowNavButton {
+        display: block;
+        width: 100%;
+        height: 70px;
+        font-size: 1em;
     }
 }
 
 @media(max-width: 400px) {
-    #ShowNavButton {
-        width: 100vw;
-    }
-
     .NavLink {
         width: 100vw;
     }
 
     .NavText {
         font-size: 15vw;
+    }
+
+    #ShowNavButton {
+        width: 100vw;
     }
 }
 /*Welcome <section> @media Queries Go Below*/
@@ -376,6 +389,10 @@ a {
     .Card-Content {
         width: 45vw;
     }
+
+    .LinkDescContainer {
+        height: 60%;
+    }
 }
 
 @media(max-width: 700px) {
@@ -388,7 +405,30 @@ a {
     .Card-Content {
         width: 85vw;
     }
+
+    .LinkDescContainer {
+        height: 65%;
+    }
 }
+
+@media(max-width: 300px) {
+    .ProjectLinkDesc {
+        font-size: 12vw;
+    }
+
+    .Card-Text {
+        font-size: 8vw;
+    }
+
+    .LinkDescContainer {
+        height: 75%;
+    }
+
+    .project-title {
+        font-size: 10vw;
+    }
+}
+
 /*Contact Media Queries Go Below*/
 @media(max-width: 750px) {
     .ContactContainer {
@@ -399,22 +439,19 @@ a {
 
     .ContactInfo {
         margin-bottom: 7vw;
+        width: 65vw;
+    }
+
+    .ContactSubHeader {
+        font-size: 6vw;
     }
 
     .SocialMediaLink {
         height: 20vw;
     }
 
-    .ContactInfo {
-        width: 65vw;
-    }
-
     .LinkText {
         line-height: 20vw;
-        font-size: 6vw;
-    }
-
-    .ContactSubHeader {
         font-size: 6vw;
     }
 }
@@ -438,6 +475,6 @@ a {
 
     .navLinkFunction {
         display: block !important;
-        width: 100%;
+        width: 100% !important;
     }
 }
